@@ -6,7 +6,7 @@ import Head from "next/head";
 function MyApp({ Component, pageProps }) {
 
   return (
-    <div>
+    <div className="bg-yellow-100 h-full w-full">
       <Head>
         <title>Jgs - Inicio</title>
         

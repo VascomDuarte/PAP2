@@ -90,7 +90,7 @@ const NavBar = () => {
           </li>
           <li className="text-xl">
             <Link
-              href="/signup"
+              href="/register"
               className="px-4 py-2 bg-yellow-500 rounded-md text-black hover:text-white hover:bg-yellow-600 transition duration-300"
             >
               Signup
