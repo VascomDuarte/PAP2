@@ -10,11 +10,14 @@ const NavBar = () => {
   const [linkColor, setLinkColor] = useState("#ffffff");
   const [addressIndex, setAddressIndex] = useState(0);
   const [phoneIndex, setPhoneIndex] = useState(0);
+  const [localIndex, setLocalIndex] = useState(0);
   const [displayAddress, setDisplayAddress] = useState("");
   const [displayPhone, setDisplayPhone] = useState("");
+  const [displayLocal, setDisplayLocal] = useState("");
 
-  const addresses = ["123 Main St", "456 Oak St", "789 Elm St"];
-  const phones = ["555-1234", "555-5678", "555-9012"];
+  const addresses = ["R. António Maria dos Santos 4", "R. da Fonte 50"];
+  const phones = ["244 471 103", "919 973 580"];
+  const local = ["Batalha", "Juncal"];
 
   const toggleAddress = () => {
     setAddressIndex((addressIndex + 1) % addresses.length);
@@ -24,16 +27,28 @@ const NavBar = () => {
     setPhoneIndex((phoneIndex + 1) % phones.length);
   };
 
+  const toggleLocal = () => {
+    setLocalIndex((localIndex + 1) % local.length);
+  };
+
   useEffect(() => {
-    const intervalId = setInterval(() => {
+    const intervalId1 = setInterval(() => {
       setDisplayAddress(addresses[addressIndex]);
-      setDisplayPhone(phones[phoneIndex]);
+      setDisplayLocal(local[localIndex]);
+      toggleLocal();
       toggleAddress();
+    }, 5000);
+
+    const intervalId2 = setInterval(() => {
+      setDisplayPhone(phones[phoneIndex]);
       togglePhone();
     }, 5000);
 
-    return () => clearInterval(intervalId);
-  }, [addressIndex, phoneIndex]);
+    return () => {
+    clearInterval(intervalId1);
+    clearInterval(intervalId2);
+    };
+  }, [addressIndex, phoneIndex, localIndex]);
 
   const handleNav = () => {
     setNav(!nav);
@@ -55,7 +70,7 @@ const NavBar = () => {
     <div>
       <div
         style={{ backgroundColor: `${navBg}` }}
-        className="flex justify-between items-center w-full h-full 2xl:px-16"
+        className="flex justify-between  items-center w-full h-full 2xl:px-16"
       >
         <Link legacyBehavior href="/" className="">
           <a>
@@ -68,19 +83,19 @@ const NavBar = () => {
             />
           </a>
         </Link>
-        <ul className="flex justify-center items-center space-x-4">
-          <li className="text-2xl">
+        <ul className="flex justify-center  space-x-8 pl-14">
+          <li className="text-xl">
             {displayAddress}
           </li>
-          <li className="text-2xl">
-            <Link href="/about">About</Link>
+          <li className="text-xl">
+            {displayLocal}
           </li>
-          <li className="text-2xl">
-              {displayPhone}
+          <li className="text-xl">
+            {displayPhone}
           </li>
         </ul>
         <ul className="flex items-center justify-between space-between">
-          <li className="mr-4 text-xl">
+          <li className="mr-4 text-lg">
             <Link
               href="/login"
               className="px-4 py-2 bg-yellow-500 rounded-md text-black hover:text-white hover:bg-yellow-600 transition duration-300"
@@ -88,7 +103,7 @@ const NavBar = () => {
               Login
             </Link>
           </li>
-          <li className="text-xl">
+          <li className="text-lg">
             <Link
               href="/register"
               className="px-4 py-2 bg-yellow-500 rounded-md text-black hover:text-white hover:bg-yellow-600 transition duration-300"
@@ -101,15 +116,15 @@ const NavBar = () => {
 
       <div style={{ backgroundColor: navBg }} className="w-full h-full">
         <ul className="flex justify-center items-center space-x-4">
-          <li className="text-2xl">
+          <li className="text-xl">
             <Link legacyBehavior href="/">
               Home
             </Link>
           </li>
-          <li className="text-2xl">
+          <li className="text-xl">
             <Link href="/about">About</Link>
           </li>
-          <li className="text-2xl">
+          <li className="text-xl">
             <Link href="/contact">Contact</Link>
           </li>
         </ul>

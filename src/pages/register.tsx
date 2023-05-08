@@ -106,11 +106,11 @@ const Register = () => {
   
 
   return (
-    <div className="min-h-screen min-w-full flex items-center justify-center py-20 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen min-w-full flex items-center justify-center  px-4 sm:px-6 lg:px-8">
       <div className=" max-w-md min-h-full w-full space-y-2 py-5  ">
-        <div className="flex-row rounded-lg bg-red-500 text-gray-200 text-center ">
+        {/* <div className="flex-row rounded-lg bg-red-500 text-gray-200 text-center ">
           <Fragment>
-            {/* <Alert
+            <Alert
               className="w-full rounded-lg text-center  relative"
               variant="filled"
               color="red"
@@ -121,9 +121,10 @@ const Register = () => {
               }}
             >
               {error}
-            </Alert> */}
+            </Alert>
           </Fragment>
-        </div>
+        </div> */}
+        <div className="border-8 rounded-xl bg-yellow-400 border-yellow-400">
         <div>
           <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-100">
             Crie a sua conta
@@ -132,7 +133,7 @@ const Register = () => {
             Ou{" "}
             <Link
               href="/admin/auth/login"
-              className="font-medium text-gray-100 hover:text-gray-300"
+              className="font-medium text-gray-100 hover:text-gray-400"
             >
               Entre na sua conta
             </Link>
@@ -249,6 +250,7 @@ const Register = () => {
             </button>
           </div>
         </form>
+      </div>
       </div>
     </div>
   );

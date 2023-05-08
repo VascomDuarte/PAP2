@@ -118,6 +118,7 @@ return (
           </Alert>
         </Fragment>
       </div>
+      <div className="border-8 rounded-xl bg-yellow-400 border-yellow-400">
       <div>
         <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-100">
           Entre na sua conta
@@ -126,7 +127,7 @@ return (
           Ou{" "}
           <Link
             legacyBehavior
-            className="font-medium text-gray-100 hover:text-gray-300"
+            className="font-medium text-gray-100 hover:text-gray-400"
             href="../auth/register"
           >
             crie sua conta
@@ -233,6 +234,7 @@ return (
           </button>
         </div>
       </form>
+    </div>
     </div>
   </div>
 );
