@@ -1,4 +1,5 @@
 import NavBar from "../Components/navbar";
+import SimpleSlider from "../Components/car";
 import "../styles/globals.css";
     // import connect from '../utils/mongo.config';                    
 import Head from "next/head";
@@ -14,6 +15,9 @@ function MyApp({ Component, pageProps }) {
         <link rel="icon" href="/favicon.png" />
       </Head>
       <NavBar />
+      <div className="h-16">
+        <SimpleSlider />
+      </div>
       <Component {...pageProps} />
     </div>
   );
