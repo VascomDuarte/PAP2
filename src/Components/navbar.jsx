@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import logo from "../public/assets/logo1.png";
 import Image from "next/image";
 import Link from "next/link";
+import SimpleSlider from "./car";
 
 const NavBar = () => {
   const [nav, setNav] = useState(false);
@@ -132,5 +133,6 @@ const NavBar = () => {
     </div>
   );
 };
+
 
 export default NavBar;

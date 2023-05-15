@@ -103,7 +103,7 @@ return (
   <div className="min-h-screen min-w-full flex items-center justify-center py-20 px-4 sm:px-6 lg:px-8">
     <div className=" max-w-md min-h-full w-full space-y-2 py-5  ">
       <div className="flex-row rounded-lg bg-red-500 text-gray-200 text-center ">
-        <Fragment>
+        {/* <Fragment>
           <Alert
             className="w-full rounded-lg text-center  relative"
             variant="filled"
@@ -116,7 +116,7 @@ return (
           >
             {error}
           </Alert>
-        </Fragment>
+        </Fragment> */}
       </div>
       <div className="border-8 rounded-xl bg-yellow-400 border-yellow-400">
       <div>
@@ -127,7 +127,7 @@ return (
           Ou{" "}
           <Link
             legacyBehavior
-            className="font-medium text-gray-100 hover:text-gray-400"
+            className="font-medium text-gray-100 hover:text-black"
             href="../auth/register"
           >
             crie sua conta

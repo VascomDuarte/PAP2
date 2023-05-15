@@ -15,9 +15,6 @@ function MyApp({ Component, pageProps }) {
         <link rel="icon" href="/favicon.png" />
       </Head>
       <NavBar />
-      <div className="h-16">
-        <SimpleSlider />
-      </div>
       <Component {...pageProps} />
     </div>
   );
