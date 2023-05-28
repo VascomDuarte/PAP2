@@ -58,10 +58,10 @@ const sliderRef=useRef();
         </div>
       </Slider>
       <div className=" space-x-8 mt-6 flex justify-center">
-        <a className="cursor-pointer pl-4" onClick={previousSlide}>
+        <a className="cursor-pointer pl-4 font-bold text-black" onClick={previousSlide}>
           Anterior
         </a>
-        <a className="cursor-pointer pl-4" onClick={nextSlide}>
+        <a className="cursor-pointer pl-4 font-bold text-black" onClick={nextSlide}>
           Próximo
         </a>
       </div>
