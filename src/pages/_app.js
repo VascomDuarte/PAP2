@@ -3,6 +3,7 @@ import SimpleSlider from "../Components/car";
 import "../styles/globals.css";
     // import connect from '../utils/mongo.config';                    
 import Head from "next/head";
+import { useEffect } from "react";
 
 function MyApp({ Component, pageProps }) {
 
@@ -12,7 +13,7 @@ function MyApp({ Component, pageProps }) {
         <title>Jgs - Inicio</title>
         
         <meta name="description" content="Venha nos conhecer" />
-        <link rel="icon" href="/favicon.png" />
+        <link rel="icon" href="img_tt" />
       </Head>
       <NavBar />
       <Component {...pageProps} />

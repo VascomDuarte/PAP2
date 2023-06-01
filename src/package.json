@@ -10,24 +10,29 @@
   },
   "dependencies": {
     "@heroicons/react": "^2.0.17",
-    "@material-tailwind/react": "^2.0.0",
+    "@material-tailwind/react": "^2.0.1",
+    "@prisma/client": "^4.14.1",
     "@svgr/webpack": "^8.0.1",
-    "@types/node": "18.15.7",
+    "@types/node": "^20.1.7",
     "@types/react": "^18.2.0",
     "@types/react-dom": "18.0.11",
     "eslint": "8.36.0",
     "eslint-config-next": "13.2.4",
     "mini-css-extract-plugin": "^2.7.5",
+    "mysql2": "^3.3.3",
     "next": "13.2.4",
     "nookies": "^2.5.2",
+    "prisma": "^4.14.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.8.0",
     "react-slick": "^0.29.0",
+    "sharp": "^0.32.1",
     "slick-carousel": "^1.8.1",
     "swr": "^2.1.1",
     "tailwindcss": "^3.3.1",
-    "typescript": "5.0.2"
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.4"
   },
   "resolutions": {
     "ajv": "8.12.0",
@@ -48,5 +53,8 @@
   "devDependencies": {
     "autoprefixer": "^10.4.14",
     "postcss": "^8.4.21"
+  },
+  "prisma": {
+    "schema": "db/schema.prisma"
   }
 }
