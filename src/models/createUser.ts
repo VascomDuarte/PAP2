@@ -1,23 +1,22 @@
-import { PrismaClient } from '@prisma/client';
+import { PrismaClient } from '@prisma/client'
 
-const prisma = require("./prismaClient");
+const client = new PrismaClient
 
-async function createUser(name, birth, gender, email) {
+async function createUser(name: string, email: string, password: string, gender: string, birthdate: string) {
   try {
-    const newUser = await prisma.user.create({
-      data: {
-        name,
-        birth,
-        gender,
-        email,
-      },
+    const newUser = await client.user.create({
+    data: {
+      name: name,
+        email: email,
+        password: password,
+        gender: gender,
+        birthdate: birthdate
+    },
     });
-    console.log("User created:", newUser);
-  } catch (error) {
-    console.error("Error creating user:", error);
-  } finally {
-    await prisma.$disconnect();
-  }
+    console.log(" User Created: ", newUser);
+    } catch (error) {
+        console.error(error);
+        }
 }
 
-createUser("John Doe", new Date(1990, 0, 1), "Male", "johndoe@example.com");
+export default createUser
