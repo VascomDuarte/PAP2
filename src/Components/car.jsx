@@ -1,72 +1,133 @@
 import React, { useRef } from "react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
 import logo from "../public/assets/logo1.png";
 import test from "../public/assets/grunge-paint-background.jpg";
 
-const SimpleSlider = ({ children }) => {
-  
-const sliderRef=useRef();
-
-  const settings = {
-    className: "center ",
-    dots: true,
-    infinite: true,
-    centerPadding: "60px",
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: false,
-  };
-
-  let slider;
-
-  const previousSlide = () => {
-    // slider.slickPrev();
-    sliderRef.current.slickPrev();
-  }
-
-  const nextSlide = () => {
-    // slider.slickNext();
-    sliderRef.current.slickNext();
-  };
-
+const SimpleSlider = () => {
   return (
-    <div className=" h-[1920px] w-[1080px]">
-      <Slider {...settings} ref={sliderRef}>
-        <div className="mt-12 flex justify-center items-center">
-          <div className="items-center justify-center flex">
-            <Image
-              src={logo}
-              alt="Logo"
-              width="90"
-              height="90"
-              className="cursor-pointer pt-2 pb-2"
-            />
+    <div className="min-h-full flex items-center justify-center py-10 px-10 sm:px-6 lg:px-8 ">
+      <div className="flex flex-col items-center justify-center mt-20 lg:space-x-10 ">
+        <div
+          id="default-carousel"
+          className="relative w-full"
+          data-carousel="slide"
+          data-autoplay="true"
+          data-carousel-interval="5000" // Set the desired interval here, e.g., 5000 milliseconds
+        >
+          {/* <!-- Carousel wrapper --> */}
+          <div className="flex items-center justify-center h-40 overflow-hidden rounded-lg md:h-64">
+            {/* <!-- Item 1 --> */}
+            <div className=" duration-700 ease-in-out" data-carousel-item>
+              <a>
+              <Image
+                priority
+                src={logo}
+                className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                alt="Teste de la carousel"
+              />
+              </a>
+            </div>
+            {/* <!-- Item 2 --> */}
+            <div className=" duration-700 ease-in-out" data-carousel-item>
+              <Image
+              priority
+                src={test}
+                className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                alt=" teste de la"
+              />
+            </div>
           </div>
+          {/* <!-- Slider indicators --> */}
+          <div className="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2">
+            <button
+              type="button"
+              className="w-3 h-3 rounded-full"
+              aria-current="true"
+              aria-label="Slide 1"
+              data-carousel-slide-to="0"
+            ></button>
+            <button
+              type="button"
+              className="w-3 h-3 rounded-full"
+              aria-current="false"
+              aria-label="Slide 2"
+              data-carousel-slide-to="1"
+            ></button>
+            <button
+              type="button"
+              className="w-3 h-3 rounded-full"
+              aria-current="false"
+              aria-label="Slide 3"
+              data-carousel-slide-to="2"
+            ></button>
+            <button
+              type="button"
+              className="w-3 h-3 rounded-full"
+              aria-current="false"
+              aria-label="Slide 4"
+              data-carousel-slide-to="3"
+            ></button>
+            <button
+              type="button"
+              className="w-3 h-3 rounded-full"
+              aria-current="false"
+              aria-label="Slide 5"
+              data-carousel-slide-to="4"
+            ></button>
+          </div>
+          {/* <!-- Slider controls --> */}
+          {/* <button
+            type="button"
+            className="absolute top-0 right-80 left-0 z-10 flex items-center justify-center h-full px-2 cursor-pointer group focus:outline-none"
+            data-carousel-prev
+          >
+            <span className="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+              <svg
+                aria-hidden="true"
+                className="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M15 19l-7-7 7-7"
+                ></path>
+              </svg>
+              <span className="sr-only">Previous</span>
+            </span>
+          </button>
+          <button
+            type="button"
+            className="absolute top-0 left-80 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+            data-carousel-next
+          >
+            <span className="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+              <svg
+                aria-hidden="true"
+                className="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M9 5l7 7-7 7"
+                ></path>
+              </svg>
+              <span className="sr-only">Next</span>
+            </span>
+          </button> */}
         </div>
-        <div className="mt-12 items-center justify-center flex">
-          <Image
-            src={test}
-            alt="Logo"
-            width="90"
-            height="90"
-            className="cursor-pointer pt-2 pb-2"
-          />
-        </div>
-      </Slider>
-      <div className=" space-x-8 mt-6 flex justify-center">
-        <a className="cursor-pointer pl-4 font-bold text-black" onClick={previousSlide}>
-          Anterior
-        </a>
-        <a className="cursor-pointer pl-4 font-bold text-black" onClick={nextSlide}>
-          Próximo
-        </a>
       </div>
     </div>
   );
-}
+};
 
 export default SimpleSlider;

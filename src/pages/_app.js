@@ -4,6 +4,7 @@ import "../styles/globals.css";
     // import connect from '../utils/mongo.config';                    
 import Head from "next/head";
 import { useEffect } from "react";
+import Footer from "../Components/footer";
 
 function MyApp({ Component, pageProps }) {
 
@@ -11,12 +12,13 @@ function MyApp({ Component, pageProps }) {
     <div className="bg-yellow-100 h-full w-full">
       <Head>
         <title>Jgs - Inicio</title>
-        
+        <link rel="icon" href="\favicon.png" />
         <meta name="description" content="Venha nos conhecer" />
-        <link rel="icon" href="img_tt" />
+        
       </Head>
       <NavBar />
       <Component {...pageProps} />
+      <Footer />
     </div>
   );
 }

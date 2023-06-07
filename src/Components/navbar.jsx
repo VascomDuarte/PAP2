@@ -68,7 +68,7 @@ const NavBar = () => {
   }, []);
 
   return (
-    <div>
+    <div className="fixed w-full">
       <div
         style={{ backgroundColor: `${navBg}` }}
         className="flex justify-between  items-center w-full h-full 2xl:px-16"
@@ -99,7 +99,7 @@ const NavBar = () => {
           <li className="mr-4 text-lg">
             <Link
               href="/login"
-              className="px-4 py-2 bg-yellow-500 rounded-md text-black hover:text-white hover:bg-yellow-600 transition duration-300"
+              className="px-4 py-2 bg-yellow-300 rounded-md text-black hover:text-white hover:bg-yellow-600 transition duration-300"
             >
               Login
             </Link>
@@ -107,7 +107,7 @@ const NavBar = () => {
           <li className="text-lg">
             <Link
               href="/register"
-              className="px-4 py-2 bg-yellow-500 rounded-md text-black hover:text-white hover:bg-yellow-600 transition duration-300"
+              className="px-4 py-2 bg-yellow-300 rounded-md text-black hover:text-white hover:bg-yellow-600 transition duration-300"
             >
               Signup
             </Link>
