@@ -1,4 +1,4 @@
-import { PrismaClient } from '@prisma/client'
+import { supabase } from '@supabase/supabase-js'
 
 const client = new PrismaClient
 

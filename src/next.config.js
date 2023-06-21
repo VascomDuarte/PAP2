@@ -27,6 +27,11 @@ const securityHeaders = [
     },
     reactStrictMode: true,
 
+    env: {
+      SUPABASE_URL: process.env.SUPABASE_URL,
+      SUPABASE_ANON_KEY: process.env.SUPABASE_ANON_KEY,
+    },
+
     webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
       config.module.rules.push({
         test: /\.svg$/,

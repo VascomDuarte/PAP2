@@ -4,6 +4,7 @@ import React, { useState, Fragment } from "react";
 import { useRouter } from "next/router";
 // import nookies from "nookies";
 import Link from "next/link";
+import { supabase } from "../utils/supabaseClient";
 
 
 
