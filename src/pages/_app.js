@@ -10,7 +10,7 @@ import logo from "public/assets/logo1.png";
 function MyApp({ Component, pageProps }) {
 
   return (
-    <div className="bg-yellow-100 h-full w-full">
+    <div className="bg-white-100 h-full w-full">
       <Head>
         <title>Jgs - Inicio</title>
         <link rel="icon" href="logo" />
