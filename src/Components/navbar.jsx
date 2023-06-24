@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import logo from "../public/assets/logo1.png";
+import logo from "../public/fotografias_site/talho_logo.jpg";
 import Image from "next/image";
 import Link from "next/link";
 import SimpleSlider from "./car";
@@ -68,7 +68,7 @@ const NavBar = () => {
   }, []);
 
   return (
-    <div className="fixed w-full">
+    <div className="fixed w-full z-50">
       <div
         style={{ backgroundColor: `${navBg}` }}
         className="flex justify-between  items-center w-full h-full 2xl:px-16"
@@ -78,9 +78,9 @@ const NavBar = () => {
             <Image
               src={logo}
               alt="Logo"
-              width="90"
-              height="90"
-              className="cursor-pointer rounded-full mt-2 mb-2"
+              width="50"
+              height="80"
+              className="cursor-pointer rounded-2xl mt-2 mb-2"
             />
           </a>
         </Link>
@@ -119,14 +119,14 @@ const NavBar = () => {
         <ul className="flex justify-center items-center space-x-4">
           <li className="text-xl">
             <Link legacyBehavior href="/">
-              Home
+              Início
             </Link>
           </li>
           <li className="text-xl">
-            <Link href="/about">About</Link>
+            <Link href="/sobrenos">Sobre Nós</Link>
           </li>
           <li className="text-xl">
-            <Link href="/contact">Contact</Link>
+            <Link href="/contactos">Contactos</Link>
           </li>
         </ul>
       </div>
