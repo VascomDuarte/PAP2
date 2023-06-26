@@ -11,9 +11,13 @@ function connect() {
                 ssl: {
                     require: true,
                     rejectUnauthorized: false
-                }
-                
-            }
+                },                
+            },
+            logging: false,
+            pool: {
+                idle: 30000,
+                acquire: 30000,
+            },
         });
     return sequelize;
 }
