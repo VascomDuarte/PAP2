@@ -3,6 +3,7 @@ import logo from "../public/fotografias_site/talho_logo.jpg";
 import Image from "next/image";
 import Link from "next/link";
 import SimpleSlider from "./car";
+import { ShoppingCartIcon } from "@heroicons/react/24/outline";
 
 const NavBar = () => {
   const [nav, setNav] = useState(false);
@@ -46,8 +47,8 @@ const NavBar = () => {
     }, 5000);
 
     return () => {
-    clearInterval(intervalId1);
-    clearInterval(intervalId2);
+      clearInterval(intervalId1);
+      clearInterval(intervalId2);
     };
   }, [addressIndex, phoneIndex, localIndex]);
 
@@ -85,15 +86,9 @@ const NavBar = () => {
           </a>
         </Link>
         <ul className="flex justify-center  space-x-8 pl-14">
-          <li className="text-xl">
-            {displayAddress}
-          </li>
-          <li className="text-xl">
-            {displayLocal}
-          </li>
-          <li className="text-xl">
-            {displayPhone}
-          </li>
+          <li className="text-xl">{displayAddress}</li>
+          <li className="text-xl">{displayLocal}</li>
+          <li className="text-xl">{displayPhone}</li>
         </ul>
         <ul className="flex items-center justify-between space-between">
           <li className="mr-4 text-lg">
@@ -101,7 +96,7 @@ const NavBar = () => {
               href="/login"
               className="px-4 py-2 bg-yellow-300 rounded-md text-black hover:text-white hover:bg-yellow-600 transition duration-300"
             >
-              Login
+              Entrar
             </Link>
           </li>
           <li className="text-lg">
@@ -109,8 +104,72 @@ const NavBar = () => {
               href="/register"
               className="px-4 py-2 bg-yellow-300 rounded-md text-black hover:text-white hover:bg-yellow-600 transition duration-300"
             >
-              Signup
+              Registo
             </Link>
+          </li>
+        </ul>
+      </div>
+
+      <div
+        style={{ backgroundColor: `${navBg}` }}
+        className="flex justify-between items-center w-full h-full 2xl:px-16 pb-4"
+      >
+        <ul className="flex justify-center space-x-8 flex-grow">
+          <li className="flex items-center">
+            <form className="flex items-center">
+              <label htmlFor="simple-search" className="sr-only">
+                Procurar
+              </label>
+              <div className="relative">
+                <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                  <svg
+                    aria-hidden="true"
+                    className="w-5 h-5 text-gray-500 dark:text-gray-400"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                      clipRule="evenodd"
+                    ></path>
+                  </svg>
+                </div>
+                <input
+                  type="text"
+                  id="simple-search"
+                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  placeholder="Procurar"
+                  required
+                />
+              </div>
+              <button
+                type="submit"
+                className="p-2.5 ml-2 text-sm font-medium text-black bg-white rounded-lg border hover:bg-blue-500 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+              >
+                <svg
+                  className="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                  ></path>
+                </svg>
+                <span className="sr-only">Search</span>
+              </button>
+            </form>
+          </li>
+        </ul>
+        <ul className="flex items-center justify-between space-between">
+          <li>
+            <ShoppingCartIcon className="h-8 w-8 text-gray-900 dark:text-white" />
           </li>
         </ul>
       </div>
@@ -133,6 +192,5 @@ const NavBar = () => {
     </div>
   );
 };
-
 
 export default NavBar;

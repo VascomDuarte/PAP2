@@ -12,7 +12,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <div className="bg-white-100 h-full w-full">
       <Head>
-        <title>Jgs - Inicio</title>
+        <title>Talhos Grosso</title>
         <link rel="icon" href="/assets/favicon.ico" sizes="32x32"/>
         <meta name="description" content="Venha nos conhecer" />
         

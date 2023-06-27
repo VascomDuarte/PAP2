@@ -10,7 +10,7 @@ export default function quemsomos() {
     <div>
       <NavBar />
 
-      <div className="pt-40 max-w-[1240px] m-auto md:grid grid-cols-3 gap-8">
+      <div className="pt-52 max-w-[1240px] m-auto md:grid grid-cols-3 gap-8">
         <div className="col-span-2 pb-[90px]">
           <p className="uppercase text-xl tracking-widest text-[#FFDB14]">
             Quem somos

@@ -4,7 +4,7 @@ const { Sequelize } = require('sequelize');
 
 function connect() {
     // Colocar em .env
-    const sequelize = new Sequelize('postgres://talhovvdb_user:kjo3L3ANtxUvdaSps2q9CrMvJoEmeXMX@dpg-cica3k59aq03rjmfv800-a.frankfurt-postgres.render.com/talhovvdb',
+    const sequelize = new Sequelize('postgres://talhovvdb_user:BU2Dy7DRgrIL9jsiMT3byAl1PpeRTEtV@dpg-cicqnlp5rnuk9qb97njg-a.frankfurt-postgres.render.com/talhovvdb_0pzy',
         {
             dialect: 'postgres',
             dialectOptions: {

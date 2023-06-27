@@ -6,7 +6,7 @@ import {PhoneIcon} from "@heroicons/react/24/outline";
 const Info = () => {
 
     return (
-    <div className="pt-40 flex items-center justify-center">
+    <div className="pt-52 flex items-center justify-center">
     <div className="flex items-center justify-center" > 
     <div className="mr-1 w-{300px} max-w-sm bg-white border-2 border-gray-400 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 ">
       <a className="flex justify-center items-center" href="#">
