@@ -6,7 +6,7 @@ const Sidebar = () => {
     <div className=" flex flex-col h-[100%] p-3 w-60 fixed bg-[#f52d2d] border border-[#f52d2d]">
       <Head>
         <title>Teste</title>
-        <link rel="icon" href="https://i.pinimg.com/736x/cb/c4/23/cbc4234b5f4f075a3f1781c06fcc1532.jpg" />
+        <link rel="icon" href="/assets/favicon.ico" />
       </Head>
       <div className=" space-y-3 ">
         <div className="flex items-center">
