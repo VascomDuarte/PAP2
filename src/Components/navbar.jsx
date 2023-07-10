@@ -85,10 +85,12 @@ const NavBar = () => {
             />
           </a>
         </Link>
-        <ul className="flex justify-center  space-x-8 pl-14">
-          <li className="text-xl">{displayAddress}</li>
+        <ul className="flex justify-center  space-x-4 pl-32">
+          
           <li className="text-xl">{displayLocal}</li>
           <li className="text-xl">{displayPhone}</li>
+          <li className="text-xl">{displayAddress}</li>
+
         </ul>
         <ul className="flex items-center justify-between space-between">
           <li className="mr-4 text-lg">
@@ -180,6 +182,9 @@ const NavBar = () => {
             <Link legacyBehavior href="/">
               Início
             </Link>
+          </li>
+          <li className="text-xl">
+            <Link href="/produtos">Produtos</Link>
           </li>
           <li className="text-xl">
             <Link href="/sobrenos">Sobre Nós</Link>
