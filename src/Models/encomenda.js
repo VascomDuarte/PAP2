@@ -13,6 +13,9 @@ const Sequelize = require('sequelize');
 // Importar o conector à base de dados
 const connector = require('../Database/connector.js')();
 
+// Importar os modelos/tabelas
+const User = require('./users.js');
+const Produto = require('./produtos.js');
 
 // Criar o modelo/tabela na base de dados
 const Encomenda = connector.define('encomenda', {
@@ -38,6 +41,10 @@ const Encomenda = connector.define('encomenda', {
 }, {
     // Opções
 });
+
+// Adicionar a refKey
+Encomenda.belongsTo(User, { foreignKey: 'userId' });
+Encomenda.belongsTo(Produto, { foreignKey: 'produtoId' });
 
 // Sincronizar o modelo/tabela com a base de dados
 // Encomenda.sync({ force: false });

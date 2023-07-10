@@ -4,8 +4,8 @@ import React, { useState, Fragment } from "react";
 import { useRouter } from "next/router";
 // import nookies from "nookies";
 import Link from "next/link";
-import { supabase } from "../utils/supabaseClient";
-
+import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
+import NavBar from "../Components/navbar";
 
 
 const Register = () => {
@@ -107,6 +107,7 @@ const Register = () => {
   
 
   return (
+    <div style={{backgroundImage: `url({..\assets\grunge-paint-background.jpg})`}} ><NavBar />
     <div className="min-h-screen min-w-full flex items-center justify-center  px-4 sm:px-6 lg:px-8">
       <div className=" max-w-md min-h-full w-full space-y-2 py-5  ">
         {/* <div className="flex-row rounded-lg bg-red-500 text-gray-200 text-center ">
@@ -253,6 +254,7 @@ const Register = () => {
         </form>
       </div>
       </div>
+    </div>
     </div>
   );
 };
