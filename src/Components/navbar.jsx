@@ -184,7 +184,7 @@ const NavBar = () => {
             </Link>
           </li>
           <li className="text-xl">
-            <Link href="/produtos">Produtos</Link>
+            <Link href="/galeria">Produtos</Link>
           </li>
           <li className="text-xl">
             <Link href="/sobrenos">Sobre Nós</Link>

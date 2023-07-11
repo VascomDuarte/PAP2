@@ -263,29 +263,33 @@ export default function Example() {
             />
           </ListItemSuffix>
         </ListItem>
+        <Link
+              href="/admin/edituser"
+            >
+            
         <ListItem className="text-gray-100">
+
           <ListItemPrefix>
             <UserCircleIcon className="h-5 w-5" />
-            
           </ListItemPrefix>
-          <Link
-              href="/admin/useredit"
-            >
-              Profile
-            </Link>
+            Profile
+            
         </ListItem>
+        </Link>
         <ListItem className="text-gray-100">
           <ListItemPrefix>
             <Cog6ToothIcon className="h-5 w-5" />
           </ListItemPrefix>
           Settings
         </ListItem>
+        <Link href="/login">
         <ListItem className="text-gray-100">
           <ListItemPrefix>
             <PowerIcon className="h-5 w-5" />
           </ListItemPrefix>
           Log Out
         </ListItem>
+        </Link>
       </List>
     </Card>
   );
